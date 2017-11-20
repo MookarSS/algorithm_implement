@@ -1,0 +1,18 @@
+function selection_sort(A){
+  var i,j,smallest,t;
+  for(i=0; i<A.length; i++){
+    smallest=i;
+    for(j=i+1; j<A.length; j++){
+      if(A[j]<A[smallest]){
+       smallest=j;
+      }
+    }
+    t=A[i];
+    A[i]=A[smallest];
+    A[smallest]=t;
+  }
+  return A;
+}
+
+选择排序：
+第 5~7 行：内层循环，确保要在剩下的未排序的数组中，找到最小值。
